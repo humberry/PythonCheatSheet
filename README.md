@@ -125,3 +125,17 @@ print la
 t = ("This", "is", "a", "tuple")
 del t[0]            # TypeError: 'tuple' object doesn't support item deletion
 ```
+
+```python
+# dict
+d = { "Car" : 100,
+      "Ship" : 70,
+      "Plane" : 50}
+for item in d:
+  print item        # Car, Ship, Plane
+print str(len(d))   # 3
+for key in d.keys():
+  print key         # Car, Ship, Plane
+for value in d.values():
+  print value       # 100, 70, 50
+```
