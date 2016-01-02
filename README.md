@@ -79,8 +79,8 @@ print first_string[11:]       # ! (character 11)
 ```python
 # string.index(), string.count()
 first_string = "Hello world!"
-a = first_string.index("w", 0, 6)
-b = first_string.index("w", 5, 12)
-print "index of 'w' in first_string"
-print "a => [0:5] = " + str(a) + " and b => [5:11] = " + str(b)
+if "w" in first_string:
+  a = first_string.index("w")
+  print "index of 'w' in first_string"
+  print "a  = " + str(a)
 ```
