@@ -103,5 +103,19 @@ print l[0:-4]
 ```
 
 ```python
-# list.remove(), .insert(), .append(), .extend(), .sort(), .reverse()
+# list.remove(), .insert(), .append(), .extend(), .sort(), .reverse(), del
+la = ["This", "is"]
+lb = ["my", "list"]
+la.extend(lb)         # la = ["This", "is", "my", "list"]
+print la
+la.remove("list")     # la = ["This", "is", "my"]
+print la
+la.insert("new", 3)   # la = ["This", "is", "my", "new"]
+print la
+la.append("list")     # la = ["This", "is", "my", "new", "list"]
+print la
+la.sort()             # la = ["
+print la
+la.reverse()          # la = ["
+print la
 ```
