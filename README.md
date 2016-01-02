@@ -90,3 +90,11 @@ if "l" in first_string:
 # a = 6
 # amount of character 'l' = 3
 ```
+
+```python
+# list, foreach
+l = ["This", "is", "my", "list", 1, 2, True, 30.5]
+foreach item in l:
+  print l
+# This, is, my, list, 1, 2, True and 30.5
+```
