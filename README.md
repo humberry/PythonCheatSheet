@@ -106,16 +106,16 @@ print l[0:-4]
 # list.remove(), .insert(), .append(), .extend(), .sort(), .reverse(), del
 la = ["This", "is"]
 lb = ["my", "list"]
-la.extend(lb)         # la = ["This", "is", "my", "list"]
+la.extend(lb)         # la = ["This", "is", "my", "list"]         ### la = la + lb ###
 print la
-la.remove("list")     # la = ["This", "is", "my"]
+la.remove("list")     # la = ["This", "is", "my"]                 ### del la[3] ###
 print la
-la.insert("new", 3)   # la = ["This", "is", "my", "new"]
+la.insert(3, "new")   # la = ["This", "is", "my", "new"]          
 print la
 la.append("list")     # la = ["This", "is", "my", "new", "list"]
 print la
-la.sort()             # la = ["
+la.sort()             # la = ["This", "is", "list", "my", "new"]
 print la
-la.reverse()          # la = ["
+la.reverse()          # la = ["new", "my", "list", "is", "This"]
 print la
 ```
