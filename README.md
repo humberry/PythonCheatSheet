@@ -67,8 +67,8 @@ for i in range(0, 10):      # range(start = 0, stop = 10, step = 1)
 # string
 first_string = "Hello world!"
 print first_string            # Hello world!
-print str(len(first_string))  # 12
-print first_string[0:5]       # Hello
-print first_string[6:11]      # world
-print first_string[11:]       # !
+print str(len(first_string))  # 12 (amount of characters => 0-11)
+print first_string[:5]        # Hello (characters 0-4)
+print first_string[6:11]      # world (characters 6-10)
+print first_string[11:]       # ! (character 11)
 ```
