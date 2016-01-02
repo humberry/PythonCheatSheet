@@ -20,7 +20,8 @@ print str(h)        # 255
 
 ```python
 # Compare: ==, <, >, <=, >=, !=
-# Logical: & (AND), | (OR), ^ (XOR), ~ (COMPLEMENT), << (SHIFT LEFT), >> (SHIFT RIGHT)
+# Bitwise: & (AND), | (OR), ^ (XOR), ~ (COMPLEMENT), << (SHIFT LEFT), >> (SHIFT RIGHT)
+# Logical: and, or, not
 ```
 
 ```python
@@ -60,4 +61,14 @@ for i in range(0, 10):      # range(start = 0, stop = 10, step = 1)
     break                   # loop interruption
   print str(i)
 # 0, 1, 3 and 4
+```
+
+```python
+# string
+first_string = "Hello world!"
+print first_string            # Hello world!
+print str(len(first_string))  # 12
+print first_string[0:5]       # Hello
+print first_string[6:11]      # world
+print first_string[11:]       # !
 ```
