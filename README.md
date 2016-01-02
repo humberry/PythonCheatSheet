@@ -31,7 +31,7 @@ if b == True:     # short form => "if b:"
   print "Yes, it's true."
 else:
   print "Did you change the value of b?"
-# Yes it's true.
+# Yes, it's true.
 ```
 
 ```python
