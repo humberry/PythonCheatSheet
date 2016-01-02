@@ -64,7 +64,7 @@ for i in range(0, 10):      # range(start = 0, stop = 10, step = 1)
 ```
 
 ```python
-# string
+# string[], len()
 first_string = "Hello world!"
 print first_string            # Hello world!
 print str(len(first_string))  # 12 (amount of characters => 0-11)
@@ -77,5 +77,10 @@ print first_string[11:]       # ! (character 11)
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 
 ```python
-# next
+# string.index(), string.count()
+first_string = "Hello world!"
+a = first_string.index("w", 0, 6)
+b = first_string.index("w", 5, 12)
+print "index of 'w' in first_string"
+print "a => [0:5] = " + str(a) + " and b => [5:11] = " + str(b)
 ```
