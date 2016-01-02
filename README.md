@@ -92,7 +92,7 @@ if "l" in first_string:
 ```
 
 ```python
-# list, for, type
+# list, type()
 l = ["This", "is", "my", "list", 1, 2, True, 30.5]
 for item in l:
   print str(item) + " [" + type(item).__name__ + "]"
