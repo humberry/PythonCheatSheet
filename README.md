@@ -46,7 +46,7 @@ while i > 0:
 # for, in, range()
 for i in range(2, 10, 2):   # range(start = 2, stop = 10, step = 2)
   print str(i)
-# only even values (2, 4, 6 and 8)
+# 2, 4, 6 and 8
 ```
 
 ```python
