@@ -1,6 +1,6 @@
 PythonCheatSheet
 ================
 
-'''python
+```python
 # coding: utf-8
-'''
+```
