@@ -101,3 +101,7 @@ print l[0:-4]
 # This [str], is [str], my [str], list [str], 1 [int], 2 [int], True [bool] and 30.5 [float]
 # ['This', 'is', 'my', 'list']
 ```
+
+```python
+# list.remove(), .insert(), .append(), .extend(), .sort(), .reverse()
+```
