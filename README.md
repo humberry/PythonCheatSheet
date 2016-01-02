@@ -27,8 +27,21 @@ print str(h)        # 255
 # if, elif, else
 b = True
 if b == True:     # short form = "if b:"
-  print "Yes it's true"
+  print "Yes it's true."
 else:
   print "Did you change the value of b?"
 ```
 
+```python
+# while
+i = 2
+while i > 0:
+  print str(i) + " > 0"
+  i -= 1          # i = i - 1
+```
+
+```python
+# for
+for i in range(2, 10, 2):   # range(start, stop, step)
+  print str(i)              # only even values (2, 4, 6 and 8)
+```
