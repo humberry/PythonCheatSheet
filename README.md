@@ -36,12 +36,12 @@ else:
 # while
 i = 2
 while i > 0:
-  print str(i) + " > 0"
-  i -= 1          # i = i - 1
+  print str(i) + " > 0"     # 2 > 0 and 1 > 0
+  i -= 1                    # i = i - 1
 ```
 
 ```python
-# for
+# for, in, range()
 for i in range(2, 10, 2):   # range(start, stop, step)
   print str(i)              # only even values (2, 4, 6 and 8)
 ```
