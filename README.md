@@ -24,7 +24,7 @@ print str(h)        # 255
 ```
 
 ```python
-# if, else if, else
+# if, elif, else
 b = True
 if (b == True):
   print "Yes it's true"
