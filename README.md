@@ -119,3 +119,10 @@ print la
 la.reverse()          # la = ["new", "my", "list", "is", "This"]
 print la
 ```
+
+```python
+# immutable tuple
+t = ("This", "is", "a", "tuple")
+del t[0]            # 
+print t
+```
