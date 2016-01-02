@@ -131,13 +131,13 @@ del t[0]            # TypeError: 'tuple' object doesn't support item deletion
 d = { "car" : 100,                      # key : value
       "ship" : 70,
       "plane" : 50}
-print "Length of d = " + str(len(d))    # 3
+print "Length of d = " + str(len(d))    # Length of d = 3
 for key in d.keys():
   print key                             # car, ship, plane
 for value in d.values():
   print value                           # 100, 70, 50
 for item in d.items():
-  if item[1] == 70:                     # ('key', value)
+  if item[1] == 70:                     # item = tuple = ('key', value)
     print "Found " + item[0]            # Found ship
 value = d.get("ship")                   # value = 70 or None if key is missing
 ```
