@@ -123,6 +123,5 @@ print la
 ```python
 # immutable tuple
 t = ("This", "is", "a", "tuple")
-del t[0]            # 
-print t
+del t[0]            # TypeError: 'tuple' object doesn't support item deletion
 ```
