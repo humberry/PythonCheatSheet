@@ -99,5 +99,5 @@ for item in l:
   print str(item) + " [" + type(item).__name__ + "]"
 print l[0:-4]
 # This [str], is [str], my [str], list [str], 1 [int], 2 [int], True [bool] and 30.5 [float]
-# This is my list
+# ['This', 'is', 'my', 'list']
 ```
