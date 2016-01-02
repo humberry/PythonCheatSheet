@@ -83,4 +83,10 @@ if "w" in first_string:
   a = first_string.index("w")
   print "index of 'w' in first_string"
   print "a  = " + str(a)
+if "l" in first_string:
+  b = first_string.count("l")
+  print "amount of character 'l' = " + str(a)
+# index of 'w' in first_string
+# a = 6
+# amount of character 'l' = 3
 ```
