@@ -141,3 +141,16 @@ for item in d.items():
     print "Found " + item[0]            # Found ship
 value = d.get("ship")                   # value = 70 or None if key is missing
 ```
+
+```python
+# string.find() => find all "is" strings in s 
+s = "This is my test string which is longer than this other string."
+i = 0                   # start position
+l = []                  # empty list
+while i != -1:
+  i = s.find("is", i)   # i = position or -1
+  if i != -1:
+    l.append(i)
+    i += 1
+print l                 # 
+```
