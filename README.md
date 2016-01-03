@@ -144,7 +144,7 @@ value = d.get("ship")                   # value = 70 or None if key is missing
 
 ```python
 # string.find() => find all "is" strings in s 
-s = "This is my test string which is longer than this other string."
+s = "This is my test string which is much longer than this other string."
 i = 0                   # start position
 l = []                  # empty list
 while i != -1:
@@ -152,5 +152,5 @@ while i != -1:
   if i != -1:
     l.append(i)
     i += 1
-print l                 # [2, 5, 29, 46]
+print l                 # [2, 5, 29, 51]
 ```
