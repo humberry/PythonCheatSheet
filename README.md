@@ -16,6 +16,8 @@ print str(bool(n))  # True
 
 h = 0xFF
 print str(h)        # 255
+print chr(65)       # A
+print ord("A")      # 65
 ```
 
 ```python
@@ -170,4 +172,19 @@ import re
 s = "This \r\nis \ta -special- string!"
 l = re.split(r"[^\w]+", s)              # or re.split(r"[^A-Za-z]+", s)
 print l                                 # ['This',  'is',  'a', 'special', 'string', '']
+```
+
+```python
+# read/write textfile
+filename = "data.txt"
+file = open(filename, 'a')          # append/create file
+file.write("A new line in data.\n")
+file.close()
+file = open(filename, 'r')          # read file
+print file.read()                   # A new line in data.\n (every time you start the script a new line is added)
+file.close()
+```
+
+```python
+# read/write binaryfile
 ```
