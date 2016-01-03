@@ -22,6 +22,7 @@ print str(h)        # 255
 # Compare: ==, <, >, <=, >=, !=
 # Bitwise: & (AND), | (OR), ^ (XOR), ~ (COMPLEMENT), << (SHIFT LEFT), >> (SHIFT RIGHT)
 # Logical: and, or, not
+# Escape Sequence: \\ (\), \r (CR), \n (LF), \' ('), \" ("), \t (TAB), \x41 (A), \u0000 (16bit Unicode), \U00000000 (32bit Unicode)
 ```
 
 ```python
