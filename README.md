@@ -152,5 +152,5 @@ while i != -1:
   if i != -1:
     l.append(i)
     i += 1
-print l                 # 
+print l                 # [2, 5, 29, 46]
 ```
