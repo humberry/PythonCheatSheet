@@ -200,3 +200,24 @@ for item in s:
   print '= 0x' + item.encode('hex')   # 0 = 0x00 ... 255 = 0xff
 file.close()
 ```
+
+```python
+# read/write csvfile
+import csv
+
+filename = "data.csv"
+file = open(filename, 'wb')                                 # write/create binary file
+la = ['column1', 'column2', 'column3', 'column4']
+lb = ['text with spaces', '1/1/2016', 4567.12, '12:00:00']
+csvwriter = csv.writer(file, delimiter=';')                 # delimiter=',' is default
+csvwriter.writerow(la)
+csvwriter.writerow(lb)
+file.close()
+
+file = open(filename, 'rb')                                 # read binary file
+csvreader = csv.reader(file, delimiter=';')                 # delimiter=',' is default
+for l in csvreader:
+  print l                                                   # ['column1', 'column2', 'column3', 'column4']
+                                                            # ['text with spaces', '1/1/2016', '4567.12', '12:00:00']
+file.close()
+```
