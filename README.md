@@ -238,3 +238,13 @@ print os.path.exists(path)          # True/False if file/directory exists or not
 print os.path.split(path)           # tuple with directory-path and filename
 print os.path.getsize(path)         # file size in bytes
 ```
+
+```python
+# sys.version , .path, .exit()
+import sys
+
+print sys.version                   # Python version
+print sys.path                      # show PYTHONPATH
+sys.path.append(path)               # add an additional path
+sys.exit()                          # exit the python script (doesn't make sense at the end)
+```
