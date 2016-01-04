@@ -176,6 +176,7 @@ print l                                 # ['This',  'is',  'a', 'special', 'stri
 
 ```python
 # read/write textfile
+# see also .readline(), .readlines(), .writelines()
 filename = "data.txt"
 file = open(filename, 'a')          # append/create file
 file.write("A new line in data.\n")
@@ -188,6 +189,7 @@ file.close()
 
 ```python
 # read/write binaryfile
+# see also .seek(), .tell()
 filename = "data.dat"
 file = open(filename, 'wb')           # write/create binary file
 l = [0,1,2,128,255]
