@@ -187,4 +187,16 @@ file.close()
 
 ```python
 # read/write binaryfile
+filename = "data.dat"
+file = open(filename, 'wb')           # write/create binary file
+l = [0,1,2,128,255]
+b = bytearray(l)
+file.write(b)
+file.close()
+file = open(filename, 'rb')           # read binary file
+s = file.read()
+for item in s:
+  print int(item.encode('hex'), 16),
+  print '= 0x' + item.encode('hex')   # 0 = 0x00 ... 255 = 0xff
+file.close()
 ```
