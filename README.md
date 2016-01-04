@@ -180,6 +180,7 @@ filename = "data.txt"
 file = open(filename, 'a')          # append/create file
 file.write("A new line in data.\n")
 file.close()
+
 file = open(filename, 'r')          # read file
 print file.read()                   # A new line in data.\n (every time you start the script a new line is added)
 file.close()
@@ -193,6 +194,7 @@ l = [0,1,2,128,255]
 b = bytearray(l)
 file.write(b)
 file.close()
+
 file = open(filename, 'rb')           # read binary file
 s = file.read()
 for item in s:
