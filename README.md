@@ -291,4 +291,11 @@ sqlcon.close()
 # Find all tables in current database:
 # sqlcur.execute("SELECT name FROM sqlite_master WHERE type='table')
 # sqldata = sqlcur.fetchall()
+
+# SELECT * FROM table1 JOIN table2 ON table1.id = table2.t1id WHERE name='myname' ORDER BY birthday;
+# ORDER BY DESC birthday;                                       # (default:ASC) / DESC (larger values first)
+# SELECT name AS nickname, birthday AS bd FROM table1;          # AS define an ALIAS
+# SELECT t1.name, t1.birthday FROM table1 as t1;                # ALIAS for table1
+# SELECT t1.name, COUNT(*) AS samename FROM table1 as t1 GROUP BY t1.name; # how many users have the same name?
+# search for a picture "SQL JOINS" with your favorite search engine
 ```
