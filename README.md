@@ -248,3 +248,47 @@ print sys.path                      # show PYTHONPATH
 sys.path.append(path)               # add an additional path
 sys.exit()                          # exit the python script (doesn't make sense at the end)
 ```
+
+```python
+# SQLite 3
+import sqlite3
+
+sqlcon = sqlite3.connect("test.db")
+sqlcur = sqlcon.cursor()
+sqlcur.execute("CREATE TABLE table1 (id INT PRIMARY KEY, name VARCHAR(40), birthday DATE)")
+sqlcur.execute("INSERT INTO table1 (id, name, birthday) VALUES (NULL, 'myname', '2016-01-01')")
+sqlcon.commit()
+sqlcon.close()
+
+sqlcon = sqlite3.connect("test.db")
+sqlcur = sqlcon.cursor()
+sqlcur.execute("SELECT * FROM table1")
+sqldata = sqlcur.fetchone()
+print sqldata
+sqlcon.close()
+
+# Delete all records in table1:
+# sqlcur.execute("DELETE FROM table1")
+# sqlcon.commit()
+
+# Delete a particular record in table1:
+# sqlcur.execute("DELETE FROM table1 WHERE id=0")
+# sqlcon.commit()
+
+# Delete whole table1:
+# sqlcur.execute("DROP TABLE table1")
+# sqlcon.commit()
+
+# Change data in a particular record in table1:
+# sqlcur.execute("UPDATE table1 SET name=? WHERE id=?", (name, id))
+# sqlcon.commit()
+
+# Working with Variables:
+# sqlcur.execute("INSERT INTO table1 VALUES (?, ?, ?)", (var1, var2, var3))
+# sqlcur.execute("SELECT name, birthday FROM table1 WHERE id = (?)", (id,))
+# sqlcon.commit()
+
+# Find all tables in current database:
+# sqlcur.execute("SELECT name FROM sqlite_master WHERE type='table')
+# sqldata = sqlcur.fetchall()
+```
