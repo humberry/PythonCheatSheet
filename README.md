@@ -263,7 +263,7 @@ sqlcon.close()
 sqlcon = sqlite3.connect("test.db")
 sqlcur = sqlcon.cursor()
 sqlcur.execute("SELECT * FROM table1")
-sqldata = sqlcur.fetchone()
+sqldata = sqlcur.fetchone()             # .fetchone() => get the first record or use .fetchall()
 print sqldata
 sqlcon.close()
 
