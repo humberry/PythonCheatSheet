@@ -278,11 +278,15 @@ sqlcon.close()
 # sqlcon.commit()
 
 # Delete whole table1:
-# sqlcur.execute("DROP TABLE table1")
+# sqlcur.execute("DROP TABLE IF EXISTS table1")
 # sqlcon.commit()
 
 # Change data in a particular record in table1:
 # sqlcur.execute("UPDATE table1 SET name=? WHERE id=?", (name, id))
+# sqlcon.commit()
+
+# Adding a column to a table
+# sqlcur.execute("ALTER TABLE table1 ADD COLUMN 'hobby' TEXT")
 # sqlcon.commit()
 
 # Working with Variables:
@@ -294,6 +298,7 @@ sqlcon.close()
 # sqlcur.execute("SELECT name FROM sqlite_master WHERE type='table')
 # sqldata = sqlcur.fetchall()
 
+# SELECT COUNT(*) FROM table1                                   # how many records are in table1?
 # SELECT * FROM table1 JOIN table2 ON table1.id = table2.t1id WHERE name='myname' ORDER BY birthday;
 # ORDER BY DESC birthday;                                       # (default:ASC) / DESC (larger values first)
 # SELECT name AS nickname, birthday AS bd FROM table1;          # AS define an ALIAS
