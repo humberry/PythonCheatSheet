@@ -253,9 +253,9 @@ sys.exit()                          # exit the python script (doesn't make sense
 # SQLite 3
 import sqlite3
 
-sqlcon = sqlite3.connect("test.db")
+sqlcon = sqlite3.connect("test.db")     # sqlite.connect(":memory:") won't be stored
 sqlcur = sqlcon.cursor()
-sqlcur.execute("CREATE TABLE table1 (id INT PRIMARY KEY, name VARCHAR(40), birthday DATE)")
+sqlcur.execute("CREATE TABLE table1 (id INTEGER PRIMARY KEY, name TEXT, birthday TEXT)")
 sqlcur.execute("INSERT INTO table1 (id, name, birthday) VALUES (NULL, 'myname', '2016-01-01')")
 sqlcon.commit()
 sqlcon.close()
@@ -266,6 +266,8 @@ sqlcur.execute("SELECT * FROM table1")
 sqldata = sqlcur.fetchone()             # .fetchone() => get the first record or use .fetchall()
 print sqldata
 sqlcon.close()
+
+# data types: NULL, INTEGER, REAL, TEXT and BLOB
 
 # Delete all records in table1:
 # sqlcur.execute("DELETE FROM table1")
