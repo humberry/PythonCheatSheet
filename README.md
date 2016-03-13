@@ -306,3 +306,8 @@ sqlcon.close()
 # SELECT t1.name, COUNT(*) AS samename FROM table1 as t1 GROUP BY t1.name; # how many users have the same name?
 # search for a picture "SQL JOINS" with your favorite search engine
 ```
+
+```python
+if __name__ == '__main__':
+    #this code will be ignored if you import the script as module
+```
