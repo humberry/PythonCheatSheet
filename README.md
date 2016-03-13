@@ -311,3 +311,10 @@ sqlcon.close()
 if __name__ == '__main__':
     #this code will be ignored if you import the script as module
 ```
+
+```python
+import module            #module.class() or module.methode()
+import package.module    #package.module.class() or package.module.methode()
+from module import *                    #class() or methode()
+from module import methode1, methode2    #methode1() or methode2()
+```
