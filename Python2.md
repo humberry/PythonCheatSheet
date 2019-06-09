@@ -3,7 +3,7 @@ Python 2.7 Cheat Sheet
 <br>
 
 ```python
-# coding: utf-8
+# -*- coding: utf-8 -*-
 ```
 
 ```python
