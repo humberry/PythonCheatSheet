@@ -1,5 +1,5 @@
-Python 2.7 CheatSheet
-=====================
+Python 2.7 Cheat Sheet
+======================
 <br>
 
 ```python
