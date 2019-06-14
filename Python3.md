@@ -40,3 +40,63 @@ if "l" in first_string:
 # a = 6
 # amount of character 'l' = 3
 ```
+
+```python
+# important built-in types: None, bool (True/False), int, long, float, str, unicode, list, dict, tuple (and some others)
+n = 30.5
+print(n)             # 30.5
+print(int(n))        # 30
+print(bool(n))       # True
+
+h = 0xFF
+print(h)             # 255
+print(chr(65))       # A
+print(ord("A"))      # 65
+print(hex(255))      # 0xff
+```
+
+```python
+# Compare: ==, <, >, <=, >=, !=
+# Bitwise: & (AND), | (OR), ^ (XOR), ~ (COMPLEMENT), << (SHIFT LEFT), >> (SHIFT RIGHT)
+# Logical: and, or, not
+# Escape Sequence: \\ (\), \r (CR), \n (LF), \' ('), \" ("), \t (TAB), \x41 (A), \u0000 (16bit Unicode), \U00000000 (32bit Unicode)
+```
+
+```python
+# if, elif, else
+b = True
+if b == True:     # short form => "if b:"
+  print("Yes, it's {}".format(b))
+else:
+  print("Did you change the value of b?")
+# Yes, it's True.
+```
+
+```python
+# while
+i = 2
+while i > 0:
+  print("{}  > 0".format(i))
+  i -= 1                    # i = i - 1
+# 2 > 0 and 1 > 0
+```
+
+```python
+# for, in, range()
+for i in range(2, 10, 2):   # range(start = 2, stop = 10, step = 2)
+  print(i)
+# 2, 4, 6 and 8
+```
+
+```python
+# break, continue, pass
+for i in range(0, 10):      # range(start = 0, stop = 10, step = 1)
+  if i == 1:
+    pass                    # do nothing
+  elif i == 2:
+    continue                # don't print 2
+  elif i == 5:
+    break                   # loop interruption
+  print(i)
+# 0, 1, 3 and 4
+```
