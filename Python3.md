@@ -120,3 +120,20 @@ for i in range(0, 10):      # range(start = 0, stop = 10, step = 1)
   print(i)
 # 0, 1, 3 and 4
 ```
+
+```python
+try:
+    print(4/1)
+    print(4/0)
+    print(4/2)
+#except ZeroDivisionError:
+    #print('division by 0 => not possible')
+except Exception as e:
+    print(e)
+finally:
+    #close file, ...
+    print('bye')
+# 4.0
+# division by zero
+# bye
+```
