@@ -137,3 +137,37 @@ finally:
 # division by zero
 # bye
 ```
+
+```python
+# list, type()
+l = ["This", "is", "my", "list", 1, 2, True, 30.5]
+for item in l:
+  print(str(item) + " [" + type(item).__name__ + "]", end='')
+print(l[0:-4])
+# This [str] is [str] my [str] list [str] 1 [int] 2 [int] True [bool] 30.5 [float]
+# ['This', 'is', 'my', 'list']
+```
+
+```python
+# list.remove(), .insert(), .append(), .extend(), .sort(), .reverse(), del
+la = ["This", "is"]
+lb = ["my", "list"]
+la.extend(lb)         # la = ["This", "is", "my", "list"]         ### la = la + lb ###
+print(la)
+la.remove("list")     # la = ["This", "is", "my"]                 ### del la[3] ###
+print(la)
+la.insert(3, "new")   # la = ["This", "is", "my", "new"]          
+print(la)
+la.append("list")     # la = ["This", "is", "my", "new", "list"]
+print(la)
+la.sort()             # la = ["This", "is", "list", "my", "new"]
+print(la)
+la.reverse()          # la = ["new", "my", "list", "is", "This"]
+print(la)
+```
+
+```python
+# immutable tuple
+t = ("This", "is", "a", "tuple")
+del t[0]            # TypeError: 'tuple' object doesn't support item deletion
+```
