@@ -35,7 +35,7 @@ if "w" in first_string:
 #print("No Newline at the end!", end='')
 if "l" in first_string:
   b = first_string.count("l")
-  print("amount of character 'l' = {0}".format(b))
+  print("amount of character 'l' = {0}".format(b))  # {0} => 0 is not necessary, because there is only one variable (b) and we don't want to change the print order...
 # position of 'w' in first_string
 # a = 6
 # amount of character 'l' = 3
