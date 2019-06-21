@@ -131,7 +131,7 @@ try:
 except Exception as e:
     print(e)
 finally:
-    #close file, ...
+    #e.g. close file, ...
     print('bye')
 # 4.0
 # division by zero
