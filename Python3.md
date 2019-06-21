@@ -33,6 +33,7 @@ if "w" in first_string:
   print("a  = {}".format(a))
 #print("format a float value to limit the decimal places = {0:.2f}".format(12.3456789))  #12.34
 #print("No Newline at the end!", end='')
+#print('string1', 'string2', 'string3', sep='/')  # string1/string2/string3
 if "l" in first_string:
   b = first_string.count("l")
   print("amount of character 'l' = {0}".format(b))  # {0} => 0 is not necessary, because there is only one variable (b) and we don't want to change the print order...
