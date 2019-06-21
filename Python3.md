@@ -42,6 +42,25 @@ if "l" in first_string:
 ```
 
 ```python
+# f strings
+name = 'my name'
+message = f'{name} is a secret!'
+print(message)      # my name is a secret!
+
+amount = 5
+print(f'{amount * 5}')  # 25
+
+hex = 0xFF
+print(f'{hex}')     # 255
+print(f'{hex:b}')   # 11111111
+print(f'{hex:c}')   # like chr(c)
+print(f'{hex:e}')   # 2.550000e+02
+print(f'{hex:f}')   # 255.000000
+print(f'{hex:o}')   # 377
+print(f'{hex:x}')   # ff
+```
+
+```python
 # important built-in types: None, bool (True/False), int, long, float, str, unicode, list, dict, tuple (and some others)
 n = 30.5
 print(n)             # 30.5
