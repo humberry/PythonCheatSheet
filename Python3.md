@@ -168,6 +168,40 @@ print(la)
 ```
 
 ```python
+l1 = [1,2,3]
+print(f'l1 = {l1}')
+l2 = [l1,'one','two','three']
+print(f"l2 = [l1,'one','two','three'] = {l2}")
+print()
+del l1[2]
+print('> del l1[2]')
+l3 = l2
+print('> l3 = l2')
+l4 = l2.copy()
+print('> l4 = l2.copy()')
+l2[0] = 5
+print('> l2[0] = 5')
+print()
+print(f'l1 = {l1}')
+print(f'l2 = {l2}')
+print(f'l3 = {l3}')
+print(f'l4 = {l4}')
+
+#l1 = [1, 2, 3]
+#l2 = [l1,'one','two','three'] = [[1, 2, 3], 'one', 'two', 'three']
+
+#> del l1[2]
+#> l3 = l2
+#> l4 = l2.copy()
+#> l2[0] = 5
+
+#l1 = [1, 2]
+#l2 = [5, 'one', 'two', 'three']
+#l3 = [5, 'one', 'two', 'three']
+#l4 = [[1, 2], 'one', 'two', 'three']
+```
+
+```python
 # immutable tuple
 t = ("This", "is", "a", "tuple")
 del t[0]            # TypeError: 'tuple' object doesn't support item deletion
