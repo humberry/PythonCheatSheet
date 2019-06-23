@@ -305,3 +305,26 @@ for l in csvreader:
   # text with spaces;1/1/2016;4567.12;12:00:00
 file.close()
 ```
+
+```python
+# os.getcwd(), .path.expanduser('~'), ...
+# see also .uname() and .environ for information about your os
+import os
+
+print(os.getcwd())                   # current working directory
+print(os.path.expanduser('~'))       # user's HOME directory
+print(os.listdir('/'))               # show root directory (r'C:\' should work for Windows)
+print(os.path.exists(path))          # True/False if file/directory exists or not (see also os.access())
+print(os.path.split(path))           # tuple with directory-path and filename
+print(os.path.getsize(path))         # file size in bytes
+```
+
+```python
+# sys.version , .path, .exit()
+import sys
+
+print(sys.version)                   # Python version
+print(sys.path)                      # show PYTHONPATH
+sys.path.append(path)                # add an additional path
+sys.exit()                           # exit the python script (doesn't make sense at the end)
+```
