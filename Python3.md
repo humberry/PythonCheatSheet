@@ -206,3 +206,21 @@ print(f'l4 = {l4}')
 t = ("This", "is", "a", "tuple")
 del t[0]            # TypeError: 'tuple' object doesn't support item deletion
 ```
+
+```python
+# Regular Expressions
+#
+# raw_string = r"\"   vs. plain_string = "\\"
+# . (any char), [^a] (not a), [A-Z] (A-Z), [A-Za-z] (A-Z and a-z), [0-9] == \d (only digits)
+# \s (whitespace chars), [A-Za-z0-9_] == \w
+# ? (left char once or never), + (left char once or several times), * (left char not, once or several times)
+# {2} (left char have to exist twice), {1,} (left char once or several times), {1,2} (left char have to exist once or twice)
+#
+import re
+
+s = "This \r\nis \ta -special- string!"
+l = re.split(r"[^\w]+", s)              # or re.split(r"[^A-Za-z]+", s)
+print(l)                                # ['This',  'is',  'a', 'special', 'string', '']
+l = re.split(r"\s+", s)
+print(l)                                # ['This', 'is', 'a', '-special-', 'string!']
+```
