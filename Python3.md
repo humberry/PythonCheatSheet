@@ -250,3 +250,33 @@ print(l)                                # ['This',  'is',  'a', 'special', 'stri
 l = re.split(r"\s+", s)
 print(l)                                # ['This', 'is', 'a', '-special-', 'string!']
 ```
+
+```python
+# read/write textfile
+# see also .readline(), .readlines(), .writelines()
+filename = "data.txt"
+file = open(filename, 'a')          # append/create file
+file.write("A new line in data.\n")
+file.close()
+
+file = open(filename, 'r')          # read file
+print(file.read())                  # A new line in data.\n (every time you start the script a new line is added)
+file.close()
+```
+
+```python
+# read/write binaryfile
+# see also .seek(), .tell()
+filename = "data.dat"
+file = open(filename, 'wb')           # write/create binary file
+l = [0,1,2,128,255]
+b = bytearray(l)
+file.write(b)
+file.close()
+
+file = open(filename, 'rb')           # read binary file
+s = file.read()
+for item in s:
+  print(f'{item} = 0x{item:x}')       # 0 = 0x0 ... 255 = 0xff
+file.close()
+```
