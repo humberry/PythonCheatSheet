@@ -51,14 +51,14 @@ print(message)      # my name is a secret!
 amount = 5
 print(f'{amount * 5}')  # 25
 
-hex = 0xFF
-print(f'{hex}')     # 255
-print(f'{hex:b}')   # 11111111
-print(f'{hex:c}')   # like chr(c)
-print(f'{hex:e}')   # 2.550000e+02
-print(f'{hex:f}')   # 255.000000
-print(f'{hex:o}')   # 377
-print(f'{hex:x}')   # ff
+value = 0xFF
+print(f'{value}')     # 255
+print(f'{value:b}')   # 11111111
+print(f'{value:c}')   # like chr(c)
+print(f'{value:e}')   # 2.550000e+02
+print(f'{value:f}')   # 255.000000
+print(f'{value:o}')   # 377
+print(f'{value:x}')   # ff
 ```
 
 ```python
