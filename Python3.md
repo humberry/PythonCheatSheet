@@ -328,3 +328,73 @@ print(sys.path)                      # show PYTHONPATH
 sys.path.append(path)                # add an additional path
 sys.exit()                           # exit the python script (doesn't make sense at the end)
 ```
+
+```python
+# SQLite 3
+import sqlite3
+
+sqlcon = sqlite3.connect("test.db")     # sqlite.connect(":memory:") won't be stored
+sqlcur = sqlcon.cursor()
+sqlcur.execute("CREATE TABLE table1 (id INTEGER PRIMARY KEY, name TEXT, birthday TEXT)")
+sqlcur.execute("INSERT INTO table1 (id, name, birthday) VALUES (NULL, 'myname', '2016-01-01')")
+sqlcon.commit()
+sqlcon.close()
+
+sqlcon = sqlite3.connect("test.db")
+sqlcur = sqlcon.cursor()
+sqlcur.execute("SELECT * FROM table1")
+sqldata = sqlcur.fetchone()             # .fetchone() => get the first record or use .fetchall()
+print(sqldata)                          # (1, 'myname', '2016-01-01')
+sqlcon.close()
+
+# data types: NULL, INTEGER, REAL, TEXT and BLOB
+
+# Delete all records in table1:
+# sqlcur.execute("DELETE FROM table1")
+# sqlcon.commit()
+
+# Delete a particular record in table1:
+# sqlcur.execute("DELETE FROM table1 WHERE id=0")
+# sqlcon.commit()
+
+# Delete whole table1:
+# sqlcur.execute("DROP TABLE IF EXISTS table1")
+# sqlcon.commit()
+
+# Change data in a particular record in table1:
+# sqlcur.execute("UPDATE table1 SET name=? WHERE id=?", (name, id))
+# sqlcon.commit()
+
+# Adding a column to a table
+# sqlcur.execute("ALTER TABLE table1 ADD COLUMN 'hobby' TEXT")
+# sqlcon.commit()
+
+# Working with Variables:
+# sqlcur.execute("INSERT INTO table1 VALUES (?, ?, ?)", (var1, var2, var3))
+# sqlcur.execute("SELECT name, birthday FROM table1 WHERE id = (?)", (id,))
+# sqlcon.commit()
+
+# Find all tables in current database:
+# sqlcur.execute("SELECT name FROM sqlite_master WHERE type='table')
+# sqldata = sqlcur.fetchall()
+
+# SELECT COUNT(*) FROM table1                                   # how many records are in table1?
+# SELECT * FROM table1 JOIN table2 ON table1.id = table2.t1id WHERE name='myname' ORDER BY birthday;
+# ORDER BY DESC birthday;                                       # (default:ASC) / DESC (larger values first)
+# SELECT name AS nickname, birthday AS bd FROM table1;          # AS define an ALIAS
+# SELECT t1.name, t1.birthday FROM table1 as t1;                # ALIAS for table1
+# SELECT t1.name, COUNT(*) AS samename FROM table1 as t1 GROUP BY t1.name; # how many users have the same name?
+# search for a picture "SQL JOINS" with your favorite search engine
+```
+
+```python
+if __name__ == '__main__':
+    #this code will be ignored if you import the script as module
+```
+
+```python
+import module            #module.class() or module.methode()
+import package.module    #package.module.class() or package.module.methode()
+from module import *                    #class() or methode()
+from module import methode1, methode2    #methode1() or methode2()
+```
