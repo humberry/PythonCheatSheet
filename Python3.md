@@ -25,21 +25,30 @@ print(first_string[11:])       # ! (character 11)
 ```
 
 ```python
-# string.find(), string.format(), string.count()
+# string.format(), string.count()
+
+print("format a float value to limit the decimal places = {0:.2f}".format(12.3456789))  #12.34
+print("No Newline at the end!", end='')
+print('string1', 'string2', 'string3', sep='/')  # string1/string2/string3
+
 first_string = "Hello world!"
-if "w" in first_string:
-  a = first_string.find("w")
-  print("position of 'w' in first_string")
-  print("a  = {}".format(a))
-#print("format a float value to limit the decimal places = {0:.2f}".format(12.3456789))  #12.34
-#print("No Newline at the end!", end='')
-#print('string1', 'string2', 'string3', sep='/')  # string1/string2/string3
 if "l" in first_string:
   b = first_string.count("l")
   print("amount of character 'l' = {0}".format(b))  # {0} => 0 is not necessary, because there is only one variable (b) and we don't want to change the print order...
-# position of 'w' in first_string
-# a = 6
 # amount of character 'l' = 3
+```
+
+```python
+# string.find() => find all "is" strings in s 
+s = "This is my test string which is much longer than this other string."
+i = 0                   # start position
+l = []                  # empty list
+while i != -1:
+  i = s.find("is", i)   # i = position or -1
+  if i != -1:
+    l.append(i)
+    i += 1
+print(l)                # [2, 5, 29, 51]
 ```
 
 ```python
@@ -222,19 +231,6 @@ for item in d.items():
     print(f'Found {item[0]}')           # Found ship
 value = d.get("ship")                   # value = 70 or None if key is missing
 print(f'value of ship = {value}')       # value of ship = 70
-```
-
-```python
-# string.find() => find all "is" strings in s 
-s = "This is my test string which is much longer than this other string."
-i = 0                   # start position
-l = []                  # empty list
-while i != -1:
-  i = s.find("is", i)   # i = position or -1
-  if i != -1:
-    l.append(i)
-    i += 1
-print(l)                # [2, 5, 29, 51]
 ```
 
 ```python
