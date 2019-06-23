@@ -225,6 +225,19 @@ print(f'value of ship = {value}')       # value of ship = 70
 ```
 
 ```python
+# string.find() => find all "is" strings in s 
+s = "This is my test string which is much longer than this other string."
+i = 0                   # start position
+l = []                  # empty list
+while i != -1:
+  i = s.find("is", i)   # i = position or -1
+  if i != -1:
+    l.append(i)
+    i += 1
+print(l)                # [2, 5, 29, 51]
+```
+
+```python
 # Regular Expressions
 #
 # raw_string = r"\"   vs. plain_string = "\\"
