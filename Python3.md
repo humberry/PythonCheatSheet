@@ -249,6 +249,11 @@ l = re.split(r"[^\w]+", s)              # or re.split(r"[^A-Za-z]+", s)
 print(l)                                # ['This',  'is',  'a', 'special', 'string', '']
 l = re.split(r"\s+", s)
 print(l)                                # ['This', 'is', 'a', '-special-', 'string!']
+l = re.findall(r"i[a-z]", s)
+print(l)                                # ['is', 'is', 'ia', 'in']
+#re.compile(pattern, flags) => flags e.g. re.IGNORECASE
+#re.split(";") => e.g. to split semicolon separated data
+#re.sub("is", "at", s) => That at a ...
 ```
 
 ```python
