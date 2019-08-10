@@ -403,3 +403,7 @@ import package.module    #package.module.class() or package.module.methode()
 from module import *                    #class() or methode()
 from module import methode1, methode2    #methode1() or methode2()
 ```
+
+
+External links disclaimer:<br>
+I'm not responsible for the content of external websites.<br>
