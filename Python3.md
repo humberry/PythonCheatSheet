@@ -402,6 +402,8 @@ import module            #module.class() or module.methode()
 import package.module    #package.module.class() or package.module.methode()
 from module import *                    #class() or methode()
 from module import methode1, methode2    #methode1() or methode2()
+
+help('modules')         # show all installed modules
 ```
 
 
